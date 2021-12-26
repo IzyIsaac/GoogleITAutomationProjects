@@ -3,7 +3,7 @@
 import os
 import requests
 
-url = 'http://34.123.169.96/fruits'
+url = 'http://34.123.169.96/fruits/'
 descriptions_dir = 'supplier-data/descriptions'
 for filename in os.listdir(descriptions_dir):
     with open(os.path.join(descriptions_dir, filename)) as description:

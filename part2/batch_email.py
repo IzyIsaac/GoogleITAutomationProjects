@@ -1,9 +1,9 @@
 #! /usr/bin/env python3
-
 import os
 import requests
 import json
 
+# Didn't download this data from the lab unfortunately...
 feedbackdir = '/data/feedback'
 
 for filename in os.listdir(feedbackdir):
