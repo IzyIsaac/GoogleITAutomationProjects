@@ -8,6 +8,6 @@ image_dir = 'supplier-data/images'
 
 for filename in os.listdir(image_dir):
     if imghdr.what(os.path.join(image_dir, filename)) != 'jpeg': continue
-    with open(os.path.join(image_dir, filename)) as opened:
+    with open(os.path.join(image_dir, filename), 'rb') as opened:
         print(f'Posting {os.path.join(image_dir, filename)}')
         r = requests.post(url, files={'file': opened})
