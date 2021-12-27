@@ -22,7 +22,7 @@ def main(argv):
     message = emails.generate('automation@example.com', 'student-00-405db269f197@example.com', 
         'Upload Completed - Online Fruit Store', 
         'All fruits are uploaded to our website successfully. A detailed list is attached to this email.',
-        out_file)
+        attachment_path = out_file)
     emails.send(message)
         
 if __name__ == "__main__":
