@@ -24,13 +24,13 @@ def main(argv):
     disk_usage = psutil.disk_usage('/').percent
     localhost = socket.gethostbyname('localhost')
     if cpu_percent > 80:
-        emails.send(emails.generate(sender, recipient, Alert.CPU, body))
+        emails.send(emails.generate(sender, recipient, str(Alert.CPU), body))
     if memory_available < 524288000:
-        emails.send(emails.generate(sender, recipient, Alert.MEMORY, body))
+        emails.send(emails.generate(sender, recipient, str(Alert.MEMORY), body))
     if disk_usage > 80:
-        emails.send(emails.generate(sender, recipient, Alert.DISK, body))
+        emails.send(emails.generate(sender, recipient, str(Alert.DISK), body))
     if localhost != '127.0.0.1':
-        emails.send(emails.generate(sender, recipient, Alert.HOST, body))
+        emails.send(emails.generate(sender, recipient, str(Alert.HOST), body))
 
 if __name__ == "__main__":
     main(sys.argv)
